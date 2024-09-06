@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     num_args = len(args)
 
-    print(f"{num_args} argument{'s' if num_args != 1 else ''}:", end="")
+    print(f"{num_args} argument{'s' if num_args != 1 else ''}", end="")
 
     if num_args == 0:
         print(".")
