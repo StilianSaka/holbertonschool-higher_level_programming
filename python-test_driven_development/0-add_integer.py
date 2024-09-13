@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Python program to add 2 integers"""
 def add_integer(a, b=98):
     """
     Adds two integers or floats, casting them to integers if necessary.
