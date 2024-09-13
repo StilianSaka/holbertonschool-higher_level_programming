@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# The shebang line specifies the script interpreter to use: Python 3.
 
 def say_my_name(first_name, last_name=""):
     """
