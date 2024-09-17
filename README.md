@@ -1,1 +1,1 @@
-holbertonschool-higher_level_programming
+Holbertonschool-Higher-Level-Programming
