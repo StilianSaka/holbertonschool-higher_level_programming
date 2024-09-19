@@ -7,7 +7,7 @@ Classes:
 """
 
 
-class Square:
+class Rectangle:
     """
     A class used to represent a Rectangle.
 
