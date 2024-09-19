@@ -33,7 +33,7 @@ class Rectangle:
         Getter for the height attribute.
 
     height(self, value):
-        Setter for the height attribute. Validates that the value is an integer.
+        Setter for the height attribute.Validates that the value is an integer.
     """
 
     def __init__(self, width=0, height=0):
@@ -107,7 +107,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        Setter for the height of the rectangle. Ensures the height is an integer.
+        Setter for the height of the rectangle.Ensures the height is an integer
 
         Parameters
         ----------
