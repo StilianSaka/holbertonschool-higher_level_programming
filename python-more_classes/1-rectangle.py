@@ -22,18 +22,18 @@ class Rectangle:
     -------
     __init__(self, width=0, height=0):
         Initializes a new Rectangle instance with width and height.
-    
+
     width(self):
         Getter for the width attribute.
-    
+
     width(self, value):
-        Setter for the width attribute. Validates that the value is a non-negative integer.
+        Setter for the width attribute. Validates that the value is an integer.
 
     height(self):
         Getter for the height attribute.
-    
+
     height(self, value):
-        Setter for the height attribute. Validates that the value is a non-negative integer.
+        Setter for the height attribute. Validates that the value is an integer.
     """
 
     def __init__(self, width=0, height=0):
@@ -46,7 +46,7 @@ class Rectangle:
             The width of the rectangle (default is 0).
         height : int, optional
             The height of the rectangle (default is 0).
-        
+
         Raises
         ------
         TypeError
@@ -72,13 +72,13 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-        Setter for the width of the rectangle. Ensures the width is a non-negative integer.
+        Setter for the width of the rectangle. Ensures the width is an integer.
 
         Parameters
         ----------
         value : int
             The new width of the rectangle.
-        
+
         Raises
         ------
         TypeError
@@ -107,13 +107,13 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        Setter for the height of the rectangle. Ensures the height is a non-negative integer.
+        Setter for the height of the rectangle. Ensures the height is an integer.
 
         Parameters
         ----------
         value : int
             The new height of the rectangle.
-        
+
         Raises
         ------
         TypeError
