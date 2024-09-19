@@ -5,8 +5,10 @@ This module defines a Rectangle class.
 Classes:
     Rectangle: An empty class that defines a rectangle.
 """
-class Rectangle:
-        """
+
+
+class Square:
+    """
     A class used to represent a Rectangle.
 
     Attributes
@@ -17,5 +19,4 @@ class Rectangle:
     -------
     None
     """
-
     pass
