@@ -94,10 +94,10 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle using the `#` character.
+        Returns a string that reperesents of the rectangle using the `#` character.
 
         Returns:
-        str: A string representation of the rectangle, or an empty string if width or height is 0.
+        str: A string that represents a rectangle, or an empty string if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
