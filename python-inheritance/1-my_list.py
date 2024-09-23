@@ -1,12 +1,20 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+"""
+This module defines a class `MyList` that inherits from `list`
+and includes a method to print the list in sorted order.
+"""
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+class MyList(list):
+    """
+    A subclass of the built-in `list` class that adds a method to
+    print the list in sorted order.
+    """
+
+    def print_sorted(self):
+        """
+        Prints the list in sorted (ascending) order.
+
+        The method uses the built-in `sorted()` function, which returns
+        a new sorted list without modifying the original list.
+        """
+        print(sorted(self))
