@@ -48,7 +48,7 @@ class BaseGeometry:
             integer_validator("width", -2) # Raises ValueError
             integer_validator("width", "5") # Raises TypeError
         """
-        if not isinstance(value, int):
+        if if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
