@@ -8,9 +8,10 @@ and a shape_info function to display their details.
 
 from abc import ABC, abstractmethod
 
+
 class Shape(ABC):
     """Abstract base class representing a geometric shape."""
-    
+
     @abstractmethod
     def area(self):
         """Compute the area of the shape."""
@@ -21,10 +22,11 @@ class Shape(ABC):
         """Compute the perimeter of the shape."""
         pass
 
+
 class Circle(Shape):
     """
     Represents a circle shape.
-    
+
     Attributes:
         radius (float): The radius of the circle.
     """
@@ -39,10 +41,11 @@ class Circle(Shape):
         """Returns the perimeter of the circle."""
         return 2 * 3.14 * self.radius
 
+
 class Rectangle(Shape):
     """
     Represents a rectangle shape.
-    
+
     Attributes:
         width (float): The width of the rectangle.
         height (float): The height of the rectangle.
@@ -59,10 +62,11 @@ class Rectangle(Shape):
         """Returns the perimeter of the rectangle."""
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
     """
     Displays the area and perimeter of a shape.
-    
+
     Args:
         shape: An object with area and perimeter methods.
     """
@@ -71,6 +75,7 @@ def shape_info(shape):
         print(f"Perimeter: {shape.perimeter():.2f}")
     except AttributeError:
         print("The object does not have area or perimeter methods.")
+
 
 if __name__ == "__main__":
     circle = Circle(5)
