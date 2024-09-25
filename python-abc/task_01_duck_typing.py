@@ -12,6 +12,7 @@ The shape_info function accepts any object that has area and perimeter
 methods and displays the results, showcasing the concept of duck typing.
 """
 
+
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
@@ -91,7 +92,8 @@ def shape_info(shape):
     try:
         area = shape.area()
         perimeter = shape.perimeter()
-        print(f"Area: {area}, Perimeter: {perimeter}")
+        print(f"Area: {area:.2f}")
+        print(f"Perimeter: {perimeter:.2f}")
     except AttributeError:
         print("The object does not have area or perimeter methods.")
 
