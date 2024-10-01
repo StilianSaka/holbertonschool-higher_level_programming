@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that contains the function write_file."""
+"""Module that contains the function to_json_string."""
 import json
 
 
