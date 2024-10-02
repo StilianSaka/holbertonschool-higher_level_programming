@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a Student class."""
 
-
 class Student:
     """Represents a student with first name, last name, and age."""
 
@@ -20,6 +19,9 @@ class Student:
         Returns:
             dict: A dictionary containing the specified attributes.
         """
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+        if (isinstance(attrs, list) and
+                all(isinstance(attr, str) for attr in attrs)):
+            return {
+                key: getattr(self, key) for key in attrs if hasattr(self, key)
+            }
         return self.__dict__
