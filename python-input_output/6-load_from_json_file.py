@@ -5,6 +5,5 @@ import json
 
 def load_from_json_file(filename):
     """Writes an object to a text file using JSON representation."""
-    with open(filename, 'r', encoding="uft-8") as f:
-        obj = json.load(f)
-    return obj
+    with open(filename, 'r') as file:
+        return json.load(file)
