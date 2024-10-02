@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""Defines a Student class."""
+
 class Student:
     """Represents a student with first name, last name, and age."""
-
 
     def __init__(self, first_name, last_name, age):
         """Initialize student attributes."""
