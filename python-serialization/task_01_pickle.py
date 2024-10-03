@@ -3,7 +3,6 @@
 A module for serializing and deserializing a custom Python object using pickle.
 """
 
-
 import pickle
 
 
@@ -25,7 +24,8 @@ class CustomObject:
         try:
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
-        except Exception as e:
+            print(f"Object serialized successfully to {filename}")
+        except (OSError, pickle.PicklingError) as e:
             print(f"Error serializing object: {e}")
 
     @classmethod
@@ -34,6 +34,8 @@ class CustomObject:
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-        except (FileNotFoundError, pickle.PickleError) as e:
+        except FileNotFoundError:
+            print(f"Error: The file '{filename}' does not exist.")
+        except (OSError, pickle.UnpicklingError) as e:
             print(f"Error deserializing object: {e}")
             return None
