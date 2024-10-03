@@ -23,7 +23,6 @@ class CustomObject:
         """Method to serialize the Object and write it to the file"""
 
         try:
-            # Writing serialized data to the file
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
         except Exception as e:
@@ -35,7 +34,6 @@ class CustomObject:
         import pickle
 
         try:
-            # Reading file content for deserialization
             with open(filename, 'rb') as file:
                 return pickle.load(file)
         except Exception as e:
