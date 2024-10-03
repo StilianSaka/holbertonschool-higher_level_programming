@@ -6,6 +6,7 @@ A module for serializing and deserializing a custom Python object using pickle.
 
 import pickle
 
+
 class CustomObject:
     def __init__(self, name, age, is_student):
         """Initialize the class objects"""
@@ -18,9 +19,9 @@ class CustomObject:
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
-    
+
     def serialize(self, filename):
-        """Serialize the current instance of the object and save it to a file."""
+        """Serialize the current instance of the object and save it."""
         try:
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
