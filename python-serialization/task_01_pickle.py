@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""
-A module for serializing and deserializing a custom Python object using pickle.
-"""
+"""Module containing pickle module and CustomObject"""
 
 import pickle
 
 
 class CustomObject:
-    def __init__(self, name, age, is_student):
-        """Initialize the class objects"""
+    """The CustomObject class"""
+
+    def __init__(self, name: str, age: int, is_student: bool):
+        """Initialization of instance"""
         self.name = name
         self.age = age
         self.is_student = is_student
@@ -20,22 +20,24 @@ class CustomObject:
         print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
-        """Serialize the current instance of the object and save it."""
+        """Method to serialize the Object and write it to the file"""
+
         try:
+            # Writing serialized data to the file
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
-            print(f"Object serialized successfully to {filename}")
-        except (OSError, pickle.PicklingError) as e:
-            print(f"Error serializing object: {e}")
+        except Exception as e:
+            print("Error occurred:", e)
 
     @classmethod
     def deserialize(cls, filename):
-        """Deserialize an object from a file and return the instance."""
+        """Method to deserialize the Object from file"""
+        import pickle
+
         try:
+            # Reading file content for deserialization
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-        except FileNotFoundError:
-            print(f"Error: The file '{filename}' does not exist.")
-        except (OSError, pickle.UnpicklingError) as e:
-            print(f"Error deserializing object: {e}")
+        except Exception as e:
+            print("Error occurred:", e)
             return None
