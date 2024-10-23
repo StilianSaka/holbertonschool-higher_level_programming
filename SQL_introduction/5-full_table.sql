@@ -1,3 +1,3 @@
--- Print the description of first_table
+-- Print the first description of a table.
 
-SHOW Columns FROM hbtn_0c_0.first_table;
+SHOW CREATE first_table;
