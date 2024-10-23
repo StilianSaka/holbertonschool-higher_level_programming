@@ -1,3 +1,6 @@
--- List all the tables of database
+-- Insert a new row in the table
 
-SHOW TABLES;
+INSERT INTO first_table (
+    id 89,
+    name Best School
+);
