@@ -1,3 +1,3 @@
--- List all the tables of database
+-- Script to count records with id = 89 in first_table
 
-SELECT * FROM first_table WITH id=89
+SELECT COUNT(*) FROM first_table WHERE id = 89;
