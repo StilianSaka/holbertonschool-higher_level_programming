@@ -1,3 +1,3 @@
 -- List all the tables of database
 
-SHOW TABLES;
+SELECT * FROM first_table WITH id=89
