@@ -1,3 +1,3 @@
--- List all the tables of database
+-- List all rows of first_table
 
 SHOW TABLES;
