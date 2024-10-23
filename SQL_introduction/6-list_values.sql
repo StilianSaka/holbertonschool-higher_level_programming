@@ -1,3 +1,3 @@
--- List all rows of first_table
+-- List all rows from first_table 
 
-SHOW TABLES;
+SELECT * FROM first_table;
