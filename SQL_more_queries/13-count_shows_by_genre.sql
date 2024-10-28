@@ -1,20 +1,20 @@
--- Select the genre name and count of linked shows
+-- Select genre name and the number of linked shows
 SELECT 
-    genres.name AS genre,  -- First column: Genre name, aliased as "genre"
-    COUNT(tv_show_genres.show_id) AS number_of_shows  -- Second column: Count of linked shows, aliased as "number_of_shows"
+    genres.name AS genre,  -- First column: Genre name, labeled as "genre"
+    COUNT(tv_show_genres.show_id) AS number_of_shows  -- Second column: Count of linked shows, labeled as "number_of_shows"
     
--- Specify the tables involved in the query
+-- Main table from which genres are selected
 FROM 
     genres
 
--- Join the tv_show_genres table to link genres with their respective shows
+-- Inner join to match each genre to its linked shows in the tv_show_genres table
 INNER JOIN 
     tv_show_genres ON genres.id = tv_show_genres.genre_id
 
--- Group results by genre to get the count for each genre
+-- Group results by genre name to count linked shows for each genre
 GROUP BY 
-    genres.name
+    genres.id, genres.name  -- Group by genre id and name to avoid issues with ONLY_FULL_GROUP_BY mode
 
--- Sort results in descending order based on the count of linked shows
+-- Sort the results in descending order of the number of linked shows
 ORDER BY 
     number_of_shows DESC;
